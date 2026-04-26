@@ -24,7 +24,7 @@ interface MapData {
 
 const INITIAL_MESSAGE: Message = {
   role: 'assistant',
-  content: '¡Hola! Bienvenid@ a VONTREK, tu aventura comienza aquí. 🌍✈️\n\n¿Ya tienes decidido un destino soñado al que quieras viajar?',
+  content: '¡Hola! Bienvenid@ a VONTREK, tu aventura comienza aquí. 🌍✈️\n\nPara empezar a planificar tu viaje perfecto, cuéntame:\n\n📍 **¿A dónde quieres ir?**\n👥 **¿Con quién viajas?** (solo, en pareja, familia, amigos)\n🗓️ **¿Cuántos días tienes?**\n👤 **¿Cuántas personas sois en total?**\n\nPuedes responder todo de golpe o ir poco a poco, ¡como prefieras!',
 };
 
 function parseMapData(text: string): { cleanText: string; mapData: MapData | null } {
