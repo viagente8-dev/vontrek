@@ -1,0 +1,111 @@
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --brand-dark: #0a1628;
+  --brand-navy: #112240;
+  --brand-teal: #00b4d8;
+  --brand-teal-light: #90e0ef;
+  --brand-gold: #f4a261;
+  --brand-sand: #e9c46a;
+  --brand-white: #f8f9fa;
+  --brand-muted: #8892b0;
+  --chat-bg: #0d1b2a;
+  --chat-user: #1a3a5c;
+  --chat-ai: #112240;
+  --chat-border: rgba(0,180,216,0.2);
+  --radius: 16px;
+  --shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--brand-dark);
+  color: var(--brand-white);
+  overflow: hidden;
+}
+
+#__next {
+  height: 100%;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--brand-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--brand-teal);
+  border-radius: 3px;
+}
+
+/* Leaflet overrides */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--radius);
+  z-index: 1;
+}
+
+.leaflet-popup-content-wrapper {
+  background: var(--brand-navy);
+  color: var(--brand-white);
+  border: 1px solid var(--brand-teal);
+  border-radius: 12px;
+}
+
+.leaflet-popup-tip {
+  background: var(--brand-teal);
+}
+
+.leaflet-popup-content {
+  margin: 12px 16px;
+}
+
+.custom-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.custom-marker span {
+  transform: rotate(45deg);
+  font-size: 16px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
