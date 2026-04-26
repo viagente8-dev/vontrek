@@ -50,7 +50,6 @@ export default function TrekMap({ mapData }: TrekMapProps) {
 
     const initMap = async () => {
       const L = (await import('leaflet')).default;
-      await import('leaflet/dist/leaflet.css');
 
       if (!mapInstanceRef.current && mapRef.current) {
         mapInstanceRef.current = L.map(mapRef.current, {
